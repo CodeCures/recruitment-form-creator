@@ -8,5 +8,7 @@ namespace RecruitmentFormCreator.DTOs
         public string? Text { get; set; }
         [Required]
         public string? QuestionType { get; set; }
+        public List<string>? Choices { get; set; } = [];
+
     }
 }

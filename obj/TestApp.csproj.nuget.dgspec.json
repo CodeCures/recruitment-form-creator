@@ -1,25 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "/Users/c.courage/Desktop/asp/RecruitmentFormCreator/TestApp.csproj": {}
+    "C:\\Users\\BEULAH\\OneDrive\\Desktop\\Code Projects\\.NET_Task\\RecruitmentForm\\TestApp.csproj": {}
   },
   "projects": {
-    "/Users/c.courage/Desktop/asp/RecruitmentFormCreator/TestApp.csproj": {
+    "C:\\Users\\BEULAH\\OneDrive\\Desktop\\Code Projects\\.NET_Task\\RecruitmentForm\\TestApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/c.courage/Desktop/asp/RecruitmentFormCreator/TestApp.csproj",
+        "projectUniqueName": "C:\\Users\\BEULAH\\OneDrive\\Desktop\\Code Projects\\.NET_Task\\RecruitmentForm\\TestApp.csproj",
         "projectName": "TestApp",
-        "projectPath": "/Users/c.courage/Desktop/asp/RecruitmentFormCreator/TestApp.csproj",
-        "packagesPath": "/Users/c.courage/.nuget/packages/",
-        "outputPath": "/Users/c.courage/Desktop/asp/RecruitmentFormCreator/obj/",
+        "projectPath": "C:\\Users\\BEULAH\\OneDrive\\Desktop\\Code Projects\\.NET_Task\\RecruitmentForm\\TestApp.csproj",
+        "packagesPath": "C:\\Users\\BEULAH\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\BEULAH\\OneDrive\\Desktop\\Code Projects\\.NET_Task\\RecruitmentForm\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/c.courage/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\BEULAH\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -111,7 +113,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.201/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

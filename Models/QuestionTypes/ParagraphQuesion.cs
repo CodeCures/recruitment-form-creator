@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace TestApp.Models.QuestionTypes
 {
-    public class ParagraphQuesion : QuestionBase
+    public class ParagraphQuestion : QuestionBase
     {
     }
 }
