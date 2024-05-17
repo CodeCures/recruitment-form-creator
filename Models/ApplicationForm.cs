@@ -2,7 +2,7 @@ using RecruitmentFormCreator.Helpers;
 
 namespace TestApp.Models
 {
-    public class AppProgram
+    public class ApplicationForm
     {
         public Guid Id { get; set; }
         public string Title { get; set; } = string.Empty;

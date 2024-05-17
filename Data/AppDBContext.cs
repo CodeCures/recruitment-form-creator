@@ -1,6 +1,7 @@
 
 using Microsoft.EntityFrameworkCore;
 using TestApp.Models;
+using RecruitmentFormCreator.Models;
 
 namespace TestApp.Data
 {
@@ -15,9 +16,9 @@ namespace TestApp.Data
         {
             base.OnModelCreating(modelBuilder);
 
-            modelBuilder.Entity<AppProgram>()
-                .ToContainer("Programs")
-                .HasPartitionKey(c => c.Id)
+            modelBuilder.Entity<ApplicationForm>()
+                .ToContainer("ApplicationForms")
+                .HasPartitionKey(a => a.Id)
                 .HasNoDiscriminator();
 
             modelBuilder.Entity<Question>()
@@ -25,13 +26,20 @@ namespace TestApp.Data
                 .HasPartitionKey(q => q.Id)
                 .HasNoDiscriminator();
 
+            modelBuilder.Entity<ApplicationSubmission>()
+                .ToContainer("ApplicationSubmissions")
+                .HasPartitionKey(x => x.Id)
+                .HasNoDiscriminator();
 
-            modelBuilder.Entity<AppProgram>()
+
+            modelBuilder.Entity<ApplicationForm>()
                 .HasMany(p => p.Questions)
-                .WithOne(q => q.AppProgram)
-                .HasForeignKey(q => q.AppProgramId);
+                .WithOne(q => q.ApplicationForm)
+                .HasForeignKey(q => q.ApplicationFormId);
+
         }
-        public DbSet<AppProgram> Programs { get; set; } = default!;
+        public DbSet<ApplicationForm> ApplicationForms { get; set; } = default!;
         public DbSet<Question> Questions { get; set; } = default!;
+        public DbSet<ApplicationSubmission> ApplicationSubmission { get; set; } = default!;
     }
 }

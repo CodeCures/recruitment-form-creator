@@ -9,7 +9,7 @@ namespace RecruitmentFormCreator.Mappers
         {
             return new Question
             {
-                AppProgramId = questionRequest.ProgramId,
+                ApplicationFormId = questionRequest.ApplicationFormId,
                 Text = questionRequest.Text,
                 QuestionType = questionRequest.QuestionType,
                 Choices = questionRequest.Choices,

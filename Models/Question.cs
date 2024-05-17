@@ -11,8 +11,8 @@ namespace TestApp.Models
         [Required]
         public string QuestionType { get; set; } = string.Empty;
         public List<string>? Choices { get; set; }
-        public Guid AppProgramId { get; set; }
+        public Guid ApplicationFormId { get; set; }
         [JsonIgnore]
-        public AppProgram AppProgram { get; set; }
+        public ApplicationForm? ApplicationForm { get; set; }
     }
 }

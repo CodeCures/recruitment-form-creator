@@ -5,7 +5,7 @@ namespace RecruitmentFormCreator.DTOs
     public class CreateQuestionRequest
     {
         [Required]
-        public Guid ProgramId { get; set; }
+        public Guid ApplicationFormId { get; set; }
         [Required]
         public string Text { get; set; } = string.Empty;
         [Required]
