@@ -7,7 +7,7 @@ namespace TestApp.Models
         public Guid Id { get; set; }
         public string Title { get; set; } = string.Empty;
         public string Description { get; set; } = string.Empty;
-        public List<InputField> PersonalInfos { get; set; } = [];
-        public List<QuestionBase> Questions { get; set; } = [];
+        public List<InputField> PersonalInputFields { get; set; } = [];
+        public List<Question> Questions { get; set; } = [];
     }
 }

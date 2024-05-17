@@ -1,15 +1,18 @@
 using System.ComponentModel.DataAnnotations;
+using System.Text.Json.Serialization;
 
-namespace RecruitmentFormCreator.DTOs
+namespace TestApp.Models
 {
-    public class CreateQuestionRequest
+    public class Question
     {
-        [Required]
-        public Guid ProgramId { get; set; }
+        public Guid Id { get; set; }
         [Required]
         public string Text { get; set; } = string.Empty;
         [Required]
         public string QuestionType { get; set; } = string.Empty;
         public List<string>? Choices { get; set; }
+        public Guid AppProgramId { get; set; }
+        [JsonIgnore]
+        public AppProgram AppProgram { get; set; }
     }
 }

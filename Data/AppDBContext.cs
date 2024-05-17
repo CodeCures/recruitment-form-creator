@@ -17,8 +17,21 @@ namespace TestApp.Data
 
             modelBuilder.Entity<AppProgram>()
                 .ToContainer("Programs")
-                .HasPartitionKey(c => c.Id);
+                .HasPartitionKey(c => c.Id)
+                .HasNoDiscriminator();
+
+            modelBuilder.Entity<Question>()
+                .ToContainer("Questions")
+                .HasPartitionKey(q => q.Id)
+                .HasNoDiscriminator();
+
+
+            modelBuilder.Entity<AppProgram>()
+                .HasMany(p => p.Questions)
+                .WithOne(q => q.AppProgram)
+                .HasForeignKey(q => q.AppProgramId);
         }
         public DbSet<AppProgram> Programs { get; set; } = default!;
+        public DbSet<Question> Questions { get; set; } = default!;
     }
 }

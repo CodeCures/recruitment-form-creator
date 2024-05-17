@@ -39,6 +39,9 @@ namespace TestApp
                 return NotFound();
             }
 
+            var programQuestions = await _context.Questions.Where(q => q.AppProgramId == program.Id).ToListAsync();
+            program.Questions = programQuestions;
+
             return program;
         }
 
@@ -88,23 +91,23 @@ namespace TestApp
 
         // POST: api/TestApp.Controllers.Program
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-        [HttpPost("{id}/questions")]
-        public async Task<ActionResult<AppProgram>> PostQestion(Guid id, CreateQuestionRequest request)
-        {
-            var question = request.ToQuestionTypeModel();
+        // [HttpPost("{id}/questions")]
+        // public async Task<ActionResult<AppProgram>> PostQestion(Guid id, CreateQuestionRequest request)
+        // {
+        //     var question = request.ToQuestionTypeModel();
 
-            var program = await _context.Programs.FindAsync(id);
-            if (program == null)
-            {
-                return NotFound();
-            }
+        //     var program = await _context.Programs.FindAsync(id);
+        //     if (program == null)
+        //     {
+        //         return NotFound();
+        //     }
 
-            program.Questions.Add(question);
+        //     program.Questions.Add(question);
 
-            await _context.SaveChangesAsync();
+        //     await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetProgram", new { id = program.Id }, program);
-        }
+        //     return CreatedAtAction("GetProgram", new { id = program.Id }, program);
+        // }
 
         // DELETE: api/TestApp.Controllers.Program/5
         [HttpDelete("{id}")]
